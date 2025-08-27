@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Inventory",
+  "type": "object",
+  "properties": {
+    "warehouse_id": {"type":"string"},
+    "sku": {"type":"string"},
+    "on_hand": {"type":"integer"},
+    "safety_stock": {"type":"integer"}
+  },
+  "required": ["warehouse_id","sku","on_hand","safety_stock"]
+}

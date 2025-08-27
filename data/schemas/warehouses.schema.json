@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Warehouse",
+  "type": "object",
+  "properties": {
+    "warehouse_id": {"type":"string"},
+    "name": {"type":"string"},
+    "lat": {"type":"number"},
+    "lon": {"type":"number"},
+    "region": {"type":"string"},
+    "max_capacity_units": {"type":"integer"}
+  },
+  "required": ["warehouse_id","lat","lon","region","max_capacity_units"]
+}

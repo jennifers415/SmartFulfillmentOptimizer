@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Order",
+  "type": "object",
+  "properties": {
+    "order_id": {"type":"string"},
+    "postal_code": {"type":"string"},
+    "region": {"type":"string"},
+    "created_at": {"type":"string", "format":"date-time"},
+    "items": {
+      "type":"array",
+      "items": {
+        "type":"object",
+        "properties": {
+          "sku": {"type":"string"},
+          "qty": {"type":"integer", "minimum":1},
+          "weight_kg": {"type":"number"}
+        },
+        "required": ["sku","qty"]
+      }
+    }
+  },
+  "required": ["order_id","postal_code","items"]
+}
